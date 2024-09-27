@@ -1,0 +1,3 @@
+/mnt/h/github/CVulkanGameEngine/build/CMakeFiles/VulkanGameEngine.dir
+/mnt/h/github/CVulkanGameEngine/build/CMakeFiles/edit_cache.dir
+/mnt/h/github/CVulkanGameEngine/build/CMakeFiles/rebuild_cache.dir

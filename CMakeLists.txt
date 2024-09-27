@@ -1,12 +1,18 @@
 cmake_minimum_required(VERSION 3.10)
-
 project(VulkanGameEngine)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Vulkan REQUIRED)
 
-add_executable(VulkanGameEngine src/main.cpp)
+include_directories(${Vulkan_INCLUDE_DIRS})
 
-target_include_directories(VulkanGameEngine PRIVATE ${Vulkan_INCLUDE_DIRS})
-target_link_libraries(VulkanGameEngine PRIVATE ${Vulkan_LIBRARIES})
+add_executable(VulkanGameEngine
+    src/main.cpp
+    src/engine.cpp
+    src/renderer.cpp
+)
+
+target_link_libraries(VulkanGameEngine ${Vulkan_LIBRARIES})
+
