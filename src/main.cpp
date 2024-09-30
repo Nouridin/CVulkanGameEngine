@@ -37,6 +37,16 @@ int main() {
 		std::cerr << "Failed to create Vulkan instance!" << std::endl;
 		return -1;
 	}
+
+	VulkanApp app;
+
+	try {
+		app.run();
+	}
+	catch (const std::exception& e) {
+		std::cerr << e.what() << std::endl;
+		return EXIT_FAILURE;
+	}
 	
 	// Main rendering loop
 	while (!glfwWindowShouldClose(window)) {
